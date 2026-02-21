@@ -11,8 +11,8 @@ if ! command -v docker &> /dev/null; then
     curl -fsSL https://get.docker.com | sudo sh
 fi
 
-echo "Checking unzip..."
-if ! command -v unzip &> /dev/null; then
+echo "Checking 7zip..."
+if ! command -v 7z &> /dev/null; then
     sudo apt update
     sudo apt install -y p7zip-full
 fi
