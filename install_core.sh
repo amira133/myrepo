@@ -14,7 +14,7 @@ fi
 echo "Checking unzip..."
 if ! command -v unzip &> /dev/null; then
     sudo apt update
-    sudo apt install -y unzip
+    sudo apt install -y p7zip-full
 fi
 
 echo "Creating directory..."
@@ -32,7 +32,7 @@ else
 fi
 
 echo "Extracting..."
-sudo unzip -o -P "$ZIP_PASSWORD" $ARCHIVE -d $INSTALL_DIR
+sudo 7z x -p"$ZIP_PASSWORD" -o$INSTALL_DIR $ARCHIVE -y
 
 echo "Removing old container if exists..."
 sudo docker rm -f core 2>/dev/null || true
