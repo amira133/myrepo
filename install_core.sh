@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-FILE_URL="https://raw.githubusercontent.com/amira133/myrepo/blob/main/temp2.zip"
+FILE_URL="https://raw.githubusercontent.com/amira133/myrepo/main/temp2.zip"
 INSTALL_DIR="/opt/core"
 ARCHIVE="/tmp/core.zip"
 
